@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNIST Neural Network Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MNIST Neural Network Visualizer</h1>
+        
+        <div class="main-content">
+            <!-- Left Column: Image Display -->
+            <div class="column left-column">
+                <h2>Input Image</h2>
+                <div class="image-display">
+                    <canvas id="imageCanvas"></canvas>
+                </div>
+                <p id="indexText" class="index-text"></p>
+                <p id="labelText" class="label-text"></p>
+                <button id="loadButton" class="action-btn load-btn">Load Random Image</button>
+            </div>
+
+            <!-- Middle Column: Network Visualization -->
+            <div class="column middle-column">
+                <h2>Neural Network</h2>
+                <div class="network-container">
+                    <div class="network-visualization" id="networkVisualization">
+                        <div class="input-layer"></div>
+                        <div class="network-animation" id="networkAnimation"></div>
+                        <div class="output-layer"></div>
+                    </div>
+                </div>
+                <button id="predictButton" class="action-btn predict-btn" disabled>Send Image</button>
+            </div>
+
+            <!-- Right Column: Prediction Result -->
+            <div class="column right-column">
+                <h2>Prediction</h2>
+                <div class="prediction-display">
+                    <div class="prediction-result" id="predictionResult">
+                        <p>Awaiting prediction...</p>
+                    </div>
+                    <div class="emoji-display" id="emojiDisplay"></div>
+                </div>
+                <p id="accuracyText" class="accuracy-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
